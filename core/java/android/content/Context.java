@@ -3653,6 +3653,16 @@ public abstract class Context {
     public static final String GATEKEEPER_SERVICE = "android.service.gatekeeper.IGateKeeperService";
 
     /**
+     * Use with {@link #getSystemService} to retrieve a {@link
+     * android.os.ContainerManager} for controlling container
+     * updates.
+     *
+     * @see #getSystemService
+     * @see android.os.ContainerManager
+     */
+    public static final String CONTAINER_SERVICE = "container";
+
+    /**
      * Determine whether the given permission is allowed for a particular
      * process and user ID running in the system.
      *
