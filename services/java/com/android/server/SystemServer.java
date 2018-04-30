@@ -1013,14 +1013,6 @@ public final class SystemServer {
                 Trace.traceEnd(Trace.TRACE_TAG_SYSTEM_SERVER);
             }
 
-            traceBeginAndSlog("StartContainerManagerService");
-            try {
-                ServiceManager.addService(Context.CONTAINER_SERVICE, new ContainerManagerService(context));
-            } catch (Throwable e) {
-                reportWtf("starting Container Manager", e);
-            }
-            Trace.traceEnd(Trace.TRACE_TAG_SYSTEM_SERVER);
-
             if (!disableNonCoreServices && !disableSearchManager) {
                 traceBeginAndSlog("StartSearchManagerService");
                 try {
